@@ -11,7 +11,7 @@ batch_size = 8 # 减少批处理大小
 T = 1.0
 rf_dt = 1
 h_dim = 128
-train = 0
+train = 1
 rf  = RectFlow()
 # 模型相关
 scorenet_model_class = "FNO3d" 

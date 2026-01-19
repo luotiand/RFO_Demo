@@ -102,12 +102,12 @@ def main(config):
     check_interval = 50  # 测试评估间隔（与代码中(ep+1)%50==0对应）
     
     # 数据路径与参数
-    TRAIN_PATH = '/data5/store1/dlt/rectified_flow/data/ns_V1e-3_N5000_T50.mat'
-    TEST_PATH = '/data5/store1/dlt/rectified_flow/data/ns_V1e-3_N5000_T50.mat'
+    TRAIN_PATH = '/data5/store1/dlt/RFO_Demo/data/ns_V1e-4_N1200_T30_R64.mat'
+    TEST_PATH = '/data5/store1/dlt/RFO_Demo/data/ns_V1e-4_N1200_T30_R64.mat'
     ntrain = 1000
-    ntest = 20
-    modes = 18
-    width = 30
+    ntest = 200
+    modes = 8
+    width = 20
     epochs = niter
     learning_rate = lr
     scheduler_step = 100
