@@ -156,7 +156,7 @@ def main(config):
     )
     test_loader = DataLoader(
         torch.utils.data.TensorDataset(test_a_norm, test_u_norm), 
-        batch_size=batch_size, 
+        batch_size=1, 
         shuffle=False
     )
 
