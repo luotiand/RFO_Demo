@@ -172,7 +172,7 @@ def main(config):
     ################################################################
     if train:
         optimizer = Adam(score_net.parameters(), lr=lr, weight_decay=1e-4)
-        scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=50, gamma=0.5)
+        scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=100, gamma=0.5)
         criterion = LpLoss(p=2, reduction='mean')
         
         # 仅记录L2相关指标

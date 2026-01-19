@@ -191,8 +191,8 @@ def main(config):
             for x, y in train_loader:
                 current_bs = x.shape[0]
                 # t = torch.rand(current_bs, 1, device=device).to(dtype=torch.float32)
-                time_options = torch.tensor([0.0, 0.5, 1.0], device=device, dtype=torch.float32)  # 定义可选时间值
-                rand_indices = torch.randint(0, 3, (current_bs, 1), device=device)  # 生成0-2的随机索引
+                time_options = torch.tensor([0.0, 1.0], device=device, dtype=torch.float32)  # 定义可选时间值
+                rand_indices = torch.randint(0, 2, (current_bs, 1), device=device)  # 生成0-2的随机索引
                 t = time_options[rand_indices]  # 根据索引选取时间值（形状：(current_bs, 1)）
                 t = t.view(current_bs, *([1] * (len(x.shape) - 1)))
                 t = t.repeat(1, S, S, T, 1)
