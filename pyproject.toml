@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rfo-demo"
+version = "0.1.0"
+description = "Rectified Flow Operator demo with a package-oriented layout"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "torch",
+  "numpy",
+  "matplotlib",
+  "h5py",
+  "scipy",
+]
+
+[tool.setuptools.packages.find]
+include = ["rfo_demo*"]
+
+[tool.setuptools.package-data]
+rfo_demo = ["configs/*.py"]
